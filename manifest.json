@@ -1,22 +1,15 @@
 {
   "manifest_version": 2,
 
-  "name": "Medium Post Link Formatter",
-  "description": "This extension will format links to posts on Medium",
+  "name": "Title Link Formatter",
+  "description": "This extension formats links based on the url and title of a web page",
   "version": "1.0",
-
   "browser_action": {
    "default_popup": "popup.html",
-   "default_title": "Click me to get a link"
+   "default_title": "Title Link Formatter - Click me to get a link based on the page title and url"
   },
   "permissions": [
   "activeTab",
-  "webNavigation",
   "tabs"
-  ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+  ]
 }
