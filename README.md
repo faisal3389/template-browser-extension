@@ -1,6 +1,9 @@
 # Chrome Extension to create links from the url and title of a page
 
-- Add the extension to chrome
+- git clone this repo
+- Open Chrome and visit chrome://extensions/
+- Click on `LOAD UNPACKED` and select the folder you cloned this into
+- Activate it if it isn't already
 - Click the extension icon
 - A popup will appear with the link
 - Copy and paste the link into your blog or page!
