@@ -1,13 +1,13 @@
-# Title Link Chrome Extension
+# Link Formatter
 
-Chrome Extension to create links from the url and title of a page.  
+An extension/add-on for browsers to format links. Useful to copy and paste links for webpages into blog posts, presentations, emails etc. The main motivation for making this was having to copy the title and url manually so many times.
 
 Link types:
 - html link
 - html link as plain text
 - markdown link
 
-![screenshot](screenshot-title-link-chrome-extension.png)
+![screenshot](screenshot-link-formatter.png)
 
 ## Installing and using the extension
 
