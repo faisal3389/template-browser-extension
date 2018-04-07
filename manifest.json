@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Medium Post Link Formatter",
+  "description": "This extension will format links to posts on Medium",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
