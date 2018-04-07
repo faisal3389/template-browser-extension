@@ -4,7 +4,7 @@ function onWindowLoad() {
         var tab = tabs[0]
         var url = tab.url;
         var title = tab.title;
-        
+
         var a = document.createElement('a');
         var linkText = document.createTextNode(title);
         a.appendChild(linkText);
@@ -17,9 +17,9 @@ function onWindowLoad() {
         var hr = document.createElement('hr');
         document.body.appendChild( hr )
 
-        var htmlLink = "&lt;a href=\"" + url + "\"&gt;" + title + "&lt;/a&gt;";
+        var htmlLink = "<a href=\"" + url + "\">" + title + "</a>";
         var htmlDiv = document.createElement('div');
-        htmlDiv.innerHTML = htmlLink;
+        htmlDiv.textContent = htmlLink;
         document.body.appendChild( htmlDiv );
 
         var hr = document.createElement('hr');
@@ -27,7 +27,7 @@ function onWindowLoad() {
 
         var markdownLink = "[" + title + "](" + url + ")"
         var markdownDiv = document.createElement('div');
-        markdownDiv.innerHTML = markdownLink;
+        markdownDiv.textContent = markdownLink;
         document.body.appendChild( markdownDiv )
     });
 
