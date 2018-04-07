@@ -4,6 +4,7 @@ function onWindowLoad() {
         var tab = tabs[0]
         var url = tab.url;
         var title = tab.title;
+        
         var a = document.createElement('a');
         var linkText = document.createTextNode(title);
         a.appendChild(linkText);

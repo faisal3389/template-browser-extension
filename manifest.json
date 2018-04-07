@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
 
-  "name": "Title Link Formatter",
+  "name": "Link Formatter",
   "description": "This extension formats links based on the url and title of a web page",
   "version": "1.0",
   "browser_action": {
    "default_popup": "popup.html",
-   "default_title": "Title Link Formatter - Click me to get a link based on the page title and url"
+   "default_title": "Link Formatter - Click me to get formatted links based on the page title and url"
   },
   "permissions": [
   "activeTab",
