@@ -1,4 +1,15 @@
-# Chrome Extension to create links from the url and title of a page
+# Title Link Chrome Extension
+
+Chrome Extension to create links from the url and title of a page.  
+
+Link types:
+- html link
+- html link as plain text
+- markdown link
+
+![screenshot](screenshot-title-link-chrome-extension.png)
+
+## Installing and using the extension
 
 - git clone this repo
 - Open Chrome and visit chrome://extensions/
@@ -17,6 +28,4 @@
 ## Possible extensions
 
 - Icon
-- Auto copy to clipboard
-- Format link for markdown
-- Format link for HTML page
+- Copy to clipboard
