@@ -12,8 +12,22 @@ function onWindowLoad() {
         a.id = "url"
         a.contentEditable = "true"
         document.body.appendChild(a)
-        a.focus();
-        a.select();
+
+        var hr = document.createElement('hr');
+        document.body.appendChild( hr )
+
+        var htmlLink = "&lt;a href=\"" + url + "\"&gt;" + title + "&lt;/a&gt;";
+        var htmlDiv = document.createElement('div');
+        htmlDiv.innerHTML = htmlLink;
+        document.body.appendChild( htmlDiv );
+
+        var hr = document.createElement('hr');
+        document.body.appendChild( hr )
+
+        var markdownLink = "[" + title + "](" + url + ")"
+        var markdownDiv = document.createElement('div');
+        markdownDiv.innerHTML = markdownLink;
+        document.body.appendChild( markdownDiv )
     });
 
 }
