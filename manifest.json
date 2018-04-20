@@ -1,8 +1,7 @@
 {
   "manifest_version": 2,
-
-  "name": "Linkr",
-  "description": "Linkr",
+  "name": "Link Formatter",
+  "description": "Link Formatter",
   "homepage_url": "https://github.com/ryandav/link-formatter",
   "version": "1.0",
   "icons": {},
