@@ -10,7 +10,7 @@ function copyToClipboard(elementID) {
   /* Copy the text inside the text field */
   document.execCommand("Copy");
   /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  alert("Copied the link: " + copyText.value);
 }
 
 function addLinksFromTab(tabs) {

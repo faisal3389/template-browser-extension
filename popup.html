@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Link Formatter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </head>
+
+  <body class="container">
+    <h2 class="display-4">Link Formatter</h2>
+
+    <div class="row">
+      <div class="col-sm-12">
+
+        <h3 class="lead">Title Link</h3>
+        <div class="input-group mb-3">
+          <a id="titleLink" href="#"></a>
+        </div>
+
+        <h3 class="lead">HTML Link</h3>
+        <div class="input-group mb-3">
+          <input id="htmlLink" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button id="htmlLinkButton" class="btn btn-outline-secondary" type="button">Copy</button>
+          </div>
+        </div>
+
+        <h3 class="lead">Markdown Link</h3>
+        <div class="input-group mb-3">
+          <input id="markdownLink" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button id="markdownLinkButton" class="btn btn-outline-secondary" type="button">Copy</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="js/popup.js"></script>
+  </body>
+</html>
