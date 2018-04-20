@@ -11,7 +11,6 @@
    "default_title": "Link Formatter - Click me to get formatted links based on the page title and url"
   },
   "permissions": [
-  "tabs",
-  "activeTab"
+  "tabs"
   ]
 }
