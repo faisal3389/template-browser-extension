@@ -3,20 +3,6 @@ body {
   min-height: 800px;
 }
 
-button {
-  display: inline-block;
+.input-group {
+  width: 100%;
 }
-
-input {
-  display: inline-block;
-}
-
-.content {
-  min-height: 800px;
-}
-
-#links {
-  font-size: 20px;
-}
-
-.linkWrapper {}

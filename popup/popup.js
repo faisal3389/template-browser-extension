@@ -1,19 +1,16 @@
 function onError(error) {
-  console.log(`Error: ${error}`);
+  alert(`Error: ${error}`);
 }
 
-function addLink(linkElementId, url, textContent) {
-  var a = document.createElement("a");    // create an anchor element
-  a.href = url;                           // set its href
-  a.textContent = textContent;            // set its text
-  document.getElementById(linkElementId).appendChild(a); // append it to where you want
-}
-
-function addTextInput(linkElementId, url, textContent) {
-  var i = document.createElement("INPUT");
-  i.setAttribute("type", "text");
-  i.value = textContent;            // set its text
-  document.getElementById(linkElementId).appendChild(i); // append it to where you want
+function copyToClipboard(elementID) {
+  /* Get the text field */
+  var copyText = document.getElementById(elementID);
+  /* Select the text field */
+  copyText.select();
+  /* Copy the text inside the text field */
+  document.execCommand("Copy");
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
 }
 
 function addLinksFromTab(tabs) {
@@ -21,20 +18,26 @@ function addLinksFromTab(tabs) {
   var url = tab.url;
   var title = tab.title;
 
-  addLink('links', url, title)
+  var titleLinkElement = document.getElementById('titleLink')
+  titleLink.href = url;
+  titleLink.textContent = title;
 
   var htmlLink = "<a href=\"" + url + "\">" + title + "</a>";
-  addTextInput('links', url, htmlLink)
+  htmlLinkElement = document.getElementById('htmlLink')
+  htmlLinkElement.value = htmlLink;
 
   var markdownLink = "[" + title + "](" + url + ")"
-  addTextInput('links', url, markdownLink)
+  markdownLinkElement = document.getElementById('markdownLink')
+  markdownLinkElement.value = markdownLink;
 }
+
+document.getElementById("htmlLinkButton").addEventListener("click", function(){
+    copyToClipboard("htmlLink");
+});
+
+document.getElementById("markdownLinkButton").addEventListener("click", function(){
+    copyToClipboard("markdownLink");
+});
 
 var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
 gettingActiveTab.then(addLinksFromTab, onError);
-
-// $('generateButton').click(() = {
-//   alert('click')
-  // var querying = browser.tabs.query({currentWindow: true, active: true});
-  // querying.then(logTabs, onError);
-// });
