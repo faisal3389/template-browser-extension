@@ -10,6 +10,10 @@
    "default_title": "Link Formatter - Click me to get formatted links based on the page title and url"
   },
   "permissions": [
-  "tabs"
-  ]
+    "tabs"
+  ],
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon@2x.png"
+  }
 }
