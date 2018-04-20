@@ -16,6 +16,7 @@ This is useful to copy and paste links for webpages into blog posts, presentatio
 - https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox
 - https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension
 - https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js
+- https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types
 
 ## References
 
