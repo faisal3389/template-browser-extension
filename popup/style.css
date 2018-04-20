@@ -1,0 +1,22 @@
+body {
+  min-width: 600px;
+  min-height: 800px;
+}
+
+button {
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+}
+
+.content {
+  min-height: 800px;
+}
+
+#links {
+  font-size: 20px;
+}
+
+.linkWrapper {}
