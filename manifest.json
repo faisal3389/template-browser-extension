@@ -3,10 +3,9 @@
   "name": "Link Formatter",
   "description": "Link Formatter",
   "homepage_url": "https://github.com/ryandav/link-formatter",
-  "version": "1.0",
-  "icons": {},
+  "version": "2.1",
   "browser_action": {
-   "default_popup": "popup/popup.html",
+   "default_popup": "popup.html",
    "default_title": "Link Formatter - Click me to get formatted links based on the page title and url"
   },
   "permissions": [
