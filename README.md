@@ -25,7 +25,6 @@ This is useful to copy and paste links for webpages into blog posts, presentatio
 
 ## Possible extensions
 
-- Icon
-- Copy to clipboard
-- add Context menu option
-- ability to add multiple links to a list to then paste all at once
+- Icons
+- Add Context menu option
+- Add multiple links to a list to copy all together
