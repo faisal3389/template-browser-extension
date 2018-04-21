@@ -2,41 +2,65 @@ function onError(error) {
   alert(`Error: ${error}`);
 }
 
-function copyToClipboard(elementID) {
+function copyInputToClipboard(elementID) {
   /* Get the text field */
   var copyText = document.getElementById(elementID);
   /* Select the text field */
   copyText.select();
   /* Copy the text inside the text field */
   document.execCommand("Copy");
-  /* Alert the copied text */
-  alert("Copied the link: " + copyText.value);
+}
+
+function copyHtmlToClipboard(elementID) {
+  const html = document.getElementById('htmlLink').value
+  var dt = new clipboard.DT();
+  dt.setData("text/plain", html);
+  dt.setData("text/html", html);
+  clipboard.write(dt);
 }
 
 function addLinksFromTab(tabs) {
   tab = tabs[0]
-  var url = tab.url;
-  var title = tab.title;
+  var tabUrl = tab.url;
+  var tabTitle = tab.title;
 
   var titleLinkElement = document.getElementById('titleLink')
-  titleLink.href = url;
-  titleLink.textContent = title;
+  titleLinkElement.url = tabUrl;
+  titleLinkElement.textContent = tabTitle;
 
-  var htmlLink = "<a href=\"" + url + "\">" + title + "</a>";
+  var titleElement = document.getElementById('titleInput')
+  titleElement.value = tabTitle;
+
+  var titleElement = document.getElementById('urlInput')
+  titleElement.value = tabUrl;
+
+  var htmlLink = "<a href=\"" + tabUrl + "\">" + tabTitle + "</a>";
   htmlLinkElement = document.getElementById('htmlLink')
   htmlLinkElement.value = htmlLink;
 
-  var markdownLink = "[" + title + "](" + url + ")"
+  var markdownLink = "[" + tabTitle + "](" + tabUrl + ")"
   markdownLinkElement = document.getElementById('markdownLink')
   markdownLinkElement.value = markdownLink;
 }
 
+document.getElementById("linkCopyButton").addEventListener("click", function(){
+    copyHtmlToClipboard("titleLink");
+});
+
+document.getElementById("titleCopyButton").addEventListener("click", function(){
+    copyInputToClipboard("titleInput");
+});
+
+document.getElementById("urlCopyButton").addEventListener("click", function(){
+    copyInputToClipboard("urlInput");
+});
+
 document.getElementById("htmlLinkButton").addEventListener("click", function(){
-    copyToClipboard("htmlLink");
+    copyInputToClipboard("htmlLink");
 });
 
 document.getElementById("markdownLinkButton").addEventListener("click", function(){
-    copyToClipboard("markdownLink");
+    copyInputToClipboard("markdownLink");
 });
 
 var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
