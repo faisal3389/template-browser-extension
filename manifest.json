@@ -3,7 +3,7 @@
   "name": "Link Formatter",
   "description": "Link Formatter",
   "homepage_url": "https://github.com/ryandav/link-formatter",
-  "version": "2.2",
+  "version": "3",
   "browser_action": {
    "default_popup": "popup.html",
    "default_title": "Link Formatter - Click me to get formatted links based on the page title and url"
