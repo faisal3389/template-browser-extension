@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
   "name": "Link Formatter",
-  "description": "Link Formatter",
+  "description": "Link Formatter - Click me to get formatted links based on the page title and url",
   "homepage_url": "https://github.com/ryandav/link-formatter",
-  "version": "3",
+  "version": "3.1",
   "browser_action": {
    "default_popup": "popup.html",
-   "default_title": "Link Formatter - Click me to get formatted links based on the page title and url"
+   "default_title": "Link Formatter"
   },
   "permissions": [
     "tabs"
