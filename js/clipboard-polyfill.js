@@ -403,7 +403,7 @@
           if (void 0 !== r) t = r;
           else if ("undefined" != typeof self) t = self;
           else try {
-            t = Function("return this")()
+            t = typeof window == 'undefined' ? typeof global == 'undefined' ? this : global : window
           } catch (t) {
             throw new Error("polyfill failed because global object is unavailable in this environment")
           }
@@ -603,7 +603,7 @@
       return this
     }();
     try {
-      n = n || Function("return this")() || (0, eval)("this")
+      n = n || typeof window == 'undefined' ? typeof global == 'undefined' ? this : global : window
     } catch (t) {
       "object" == typeof window && (n = window)
     }
