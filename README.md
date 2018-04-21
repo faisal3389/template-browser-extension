@@ -4,7 +4,7 @@ An extension/add-on for browsers to format links. When you click on the extensio
 
 This is useful to copy and paste links for webpages into blog posts, presentations, emails etc. The main motivation for making this was having to copy the title and url manually so many times.
 
-![screenshot](screenshot.png)
+[![screenshot](screenshot.png)](https://addons.mozilla.org/en-US/firefox/addon/link-formatter/)
 
 ### Firefox
 
