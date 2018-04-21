@@ -63,5 +63,12 @@ document.getElementById("markdownLinkButton").addEventListener("click", function
     copyInputToClipboard("markdownLink");
 });
 
-var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-gettingActiveTab.then(addLinksFromTab, onError);
+var sBrowser, sUsrAg = navigator.userAgent;
+if(sUsrAg.indexOf("Chrome") > -1) {
+  chrome.tabs.query({active: true, currentWindow: true}, function(arrayOfTabs) {
+    addLinksFromTab(arrayOfTabs);
+  });
+} else {
+  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  gettingActiveTab.then(addLinksFromTab, onError);
+}
