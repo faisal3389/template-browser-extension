@@ -23,6 +23,12 @@ This is useful to copy and paste links for webpages into blog posts, presentatio
 - https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549 The post that I read by Quincy Larson on Medium that led me to try out the below Anchor Links Chrome Extension
 - https://github.com/castroalves/anchor-links This inspired me to write this Chrome extension as it is used for making it easier to add links to specific sections of your blog post on Medium
 
+## Libraries used
+
+- [lgarron/clipboard-polyfill: Sane copying on the web.](https://github.com/lgarron/clipboard-polyfill)
+- [Bootstrap · The most popular HTML, CSS, and JS library in the world.](https://getbootstrap.com/)
+- [jQuery](https://jquery.com/)
+- [Popper.js](https://popper.js.org/)
 
 ## Possible extensions
 
