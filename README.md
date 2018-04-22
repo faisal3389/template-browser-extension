@@ -48,7 +48,7 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 
 ## Possible extensions
 
-- List in Chrome web store
+- Fade out and close once link is copied to clipboard
 - Icons
-- Consider Context menu option
+- Ability to edit url and text that will then format the links accordingly
 - Add multiple links to a list to copy all together
