@@ -1,3 +1,21 @@
+$("#aboutContent").hide();
+
+$("#aboutButton").click(() => {
+  $("#content").slideUp("slow", () => {
+    $("#aboutContent").slideDown("slow", () => {
+      $("#aboutContent").show();
+    });
+  })
+});
+
+$("#hideAboutButton").click(() => {
+  $("#aboutContent").slideUp("slow", () => {
+    $("#content").slideDown("slow", () => {
+      $("#content").show();
+    });
+  })
+})
+
 function onError(error) {
   alert(`Error: ${error}`);
 }

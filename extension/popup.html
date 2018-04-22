@@ -64,7 +64,7 @@
           </div>
 
           <h3 class="lead">Link list</h3>
-          <div class="btn-group" role="group" aria-label="Link List buttons">
+          <div class="btn-group btn-group-justified" role="group" aria-label="Link List buttons">
             <button id="addLinkToListButton" class="btn btn-outline-secondary" type="button">Add Link</button>
             <button id="clearListButton" class="btn btn-outline-secondary" type="button">Clear List</button>
             <button id="copyListButton" class="btn btn-outline-secondary" type="button">Copy List</button>
@@ -84,6 +84,35 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <div id="aboutContent">
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 class="lead">About</h3>
+          <p>
+          When you click on the extension it displays the link of the current tab as an anchor link, html and markdown.
+          </p>
+          <p>
+          You can copy the links to the clipboard, as well as add links to a list and then copy the whole list.
+          </p>
+          <p>
+            View the Link Formatter source code and Readme on GitHub
+            <a href="https://github.com/ryandav/link-formatter">
+              github.com/ryandav/link-formatter
+            </a>
+          </p>
+          <p align="center">
+            <a href="https://github.com/ryandav/link-formatter">
+              <img src="img/GitHubMark.png" alt="" width="200">
+            </a>
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div class="input-group mb-3">
+        <button id="hideAboutButton" class="btn btn-outline-secondary btn-block" type="button" name="button">Hide</button>
       </div>
     </div>
     <script src="js/popup.js"></script>
