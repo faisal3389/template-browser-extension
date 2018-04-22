@@ -58,8 +58,5 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 
 ## Possible extensions
 
-- Fade out and close once link is copied to clipboard
-- Icons
 - Ability to edit url and text that will then format the links accordingly
-- Add multiple links to a list to copy all together
-- About button with instructions and links to github
+- Remove link from list?
