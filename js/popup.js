@@ -2,73 +2,123 @@ function onError(error) {
   alert(`Error: ${error}`);
 }
 
-function copyInputToClipboard(elementID) {
-  /* Get the text field */
-  var copyText = document.getElementById(elementID);
-  /* Select the text field */
-  copyText.select();
-  /* Copy the text inside the text field */
-  document.execCommand("Copy");
+function alertClipboardAndClose(name) {
+  let alert = document.getElementById("alert")
+  $("#alert").hide();
+  alert.textContent = "Copied " + name + " to Clipboard";
+  alert.classList.add("alert", "alert-secondary")
+  $("html, body").animate({ scrollTop: 0 }, "slow", () => {
+    $("#alert").slideDown("slow", () => {
+      $("#content").slideUp("slow",() => {
+        $("#titleContent").fadeOut(2000, () => {
+          window.close()
+        });
+      })
+    });
+  });
 }
 
-function copyHtmlToClipboard(elementID) {
-  const html = document.getElementById('htmlLink').value
-  var dt = new clipboard.DT();
-  dt.setData("text/plain", html);
-  dt.setData("text/html", html);
-  clipboard.write(dt);
+let linkListStorage = localStorage.getItem("linkListStorage");
+console.log(linkListStorage)
+if(linkListStorage != undefined) {
+  let linkList = document.getElementById("linkList")
+  linkList.outerHTML = linkListStorage
 }
+
+function addLinkToList() {
+  let link = document.getElementById('titleLink')
+  let linkToAdd = link.cloneNode(true);
+  let linkList = document.getElementById("linkList")
+  let newLinkListElement = document.createElement("li")
+  newLinkListElement.appendChild(linkToAdd)
+  linkList.appendChild(newLinkListElement)
+  localStorage.setItem("linkListStorage", linkList.outerHTML);
+  console.log(localStorage.getItem("linkListStorage"))
+}
+
+function copyInputToClipboard(elementID, name) {
+  let e = document.getElementById(elementID)
+  let dt = new clipboard.DT();
+  dt.setData("text/plain", e);
+  clipboard.write(dt).then(alertClipboardAndClose(name));
+}
+
+function copyHtmlToClipboard(elementID, name) {
+  let e = document.getElementById(elementID)
+  let dt = new clipboard.DT();
+  dt.setData("text/plain", e);
+  dt.setData("text/html", e.outerHTML);
+  clipboard.write(dt).then(alertClipboardAndClose(name));
+}
+
+addLinkToListButton = document.getElementById("addLinkToListButton")
+addLinkToListButton.addEventListener("click", addLinkToList)
+
+copyListButton = document.getElementById("copyListButton")
+copyListButton.addEventListener("click", function(){
+  copyHtmlToClipboard("linkList", "Link List")
+})
+
+clearListButton = document.getElementById("clearListButton")
+clearListButton.addEventListener("click", function(){
+  console.log("Clearing link list...")
+  let list = document.getElementById("linkList")
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
+  }
+  localStorage.removeItem("linkListStorage")
+})
 
 function addLinksFromTab(tabs) {
   tab = tabs[0]
-  var tabUrl = tab.url;
-  var tabTitle = tab.title;
+  let tabUrl = tab.url;
+  let tabTitle = tab.title;
 
-  var titleLinkElement = document.getElementById('titleLink')
+  let titleLinkElement = document.getElementById('titleLink')
   titleLinkElement.url = tabUrl;
   titleLinkElement.textContent = tabTitle;
 
-  var titleElement = document.getElementById('titleInput')
-  titleElement.value = tabTitle;
+  let titleInput = document.getElementById('titleInput')
+  titleInput.value = tabTitle;
 
-  var titleElement = document.getElementById('urlInput')
-  titleElement.value = tabUrl;
+  let urlInput = document.getElementById('urlInput')
+  urlInput.value = tabUrl;
 
-  var htmlLink = "<a href=\"" + tabUrl + "\">" + tabTitle + "</a>";
+  let htmlLink = "<a href=\"" + tabUrl + "\">" + tabTitle + "</a>";
   htmlLinkElement = document.getElementById('htmlLink')
   htmlLinkElement.value = htmlLink;
 
-  var markdownLink = "[" + tabTitle + "](" + tabUrl + ")"
+  let markdownLink = "[" + tabTitle + "](" + tabUrl + ")"
   markdownLinkElement = document.getElementById('markdownLink')
   markdownLinkElement.value = markdownLink;
 }
 
 document.getElementById("linkCopyButton").addEventListener("click", function(){
-    copyHtmlToClipboard("titleLink");
+    copyHtmlToClipboard("titleLink", "Link");
 });
 
 document.getElementById("titleCopyButton").addEventListener("click", function(){
-    copyInputToClipboard("titleInput");
+    copyInputToClipboard("titleInput", "Title");
 });
 
 document.getElementById("urlCopyButton").addEventListener("click", function(){
-    copyInputToClipboard("urlInput");
+    copyInputToClipboard("urlInput", "Url");
 });
 
 document.getElementById("htmlLinkButton").addEventListener("click", function(){
-    copyInputToClipboard("htmlLink");
+    copyInputToClipboard("htmlLink", "HTML Link");
 });
 
 document.getElementById("markdownLinkButton").addEventListener("click", function(){
-    copyInputToClipboard("markdownLink");
+    copyInputToClipboard("markdownLink", "Markdown Link");
 });
 
-var sBrowser, sUsrAg = navigator.userAgent;
+let sBrowser, sUsrAg = navigator.userAgent;
 if(sUsrAg.indexOf("Chrome") > -1) {
   chrome.tabs.query({active: true, currentWindow: true}, function(arrayOfTabs) {
     addLinksFromTab(arrayOfTabs);
   });
 } else {
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  let gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
   gettingActiveTab.then(addLinksFromTab, onError);
 }

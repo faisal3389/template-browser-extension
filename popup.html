@@ -13,61 +13,77 @@
   </head>
 
   <body class="container">
-    <h2 class="display-4">Link Formatter</h2>
 
-    <div class="row">
-      <div class="col-sm-12">
+    <div id="titleContent">
+      <h2 class="display-4">Link Formatter</h2>
+      <div id="alert" role="alert"></div>
+    </div>
 
-        <div class="input-group mb-3">
-          <button id="linkCopyButton" class="btn btn-outline-secondary btn-block" type="button">Copy Link</button>
-        </div>
+    <div id="content">
+      <div class="row">
+        <div class="col-sm-12">
 
-        <h3 class="lead">Link</h3>
-        <div class="input-group mb-3">
-          <a id="titleLink" href="#"></a>
-        </div>
+          <div class="input-group mb-3">
+            <button id="linkCopyButton" class="btn btn-outline-secondary btn-block" type="button">Copy Link</button>
+          </div>
 
-        <h3 class="lead">Title</h3>
-        <div class="input-group mb-3">
-          <input id="titleInput" type="text" class="form-control" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button id="titleCopyButton" class="btn btn-outline-secondary" type="button">Copy</button>
+          <h3 class="lead">Link</h3>
+          <div class="input-group mb-3">
+            <a id="titleLink" href="#"></a>
+          </div>
+
+          <h3 class="lead">Title</h3>
+          <div class="input-group mb-3">
+            <input id="titleInput" type="text" class="form-control" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button id="titleCopyButton" class="btn btn-outline-secondary" type="button">Copy</button>
+            </div>
+          </div>
+
+          <h3 class="lead">Url</h3>
+          <div class="input-group mb-3">
+            <input id="urlInput" type="text" class="form-control" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button id="urlCopyButton" class="btn btn-outline-secondary" type="button">Copy</button>
+            </div>
+          </div>
+
+          <h3 class="lead">HTML</h3>
+          <div class="input-group mb-3">
+            <input id="htmlLink" type="text" class="form-control" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button id="htmlLinkButton" class="btn btn-outline-secondary" type="button">Copy</button>
+            </div>
+          </div>
+
+          <h3 class="lead">Markdown</h3>
+          <div class="input-group mb-3">
+            <input id="markdownLink" type="text" class="form-control" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button id="markdownLinkButton" class="btn btn-outline-secondary" type="button">Copy</button>
+            </div>
+          </div>
+
+          <h3 class="lead">Link list</h3>
+          <div class="btn-group" role="group" aria-label="Link List buttons">
+            <button id="addLinkToListButton" class="btn btn-outline-secondary" type="button">Add Link</button>
+            <button id="clearListButton" class="btn btn-outline-secondary" type="button">Clear List</button>
+            <button id="copyListButton" class="btn btn-outline-secondary" type="button">Copy List</button>
+          </div>
+          <p>
+            <div class="col-sm-12">
+              <div class="input-group mb-3">
+                <ul id="linkList" class="list-group">
+                </ul>
+              </div>
+            </div>
+          </p>
+
+          <hr>
+          <div class="input-group mb-3">
+            <button id="aboutButton" class="btn btn-outline-secondary btn-block" type="button" name="button">About</button>
           </div>
         </div>
-
-        <h3 class="lead">Url</h3>
-        <div class="input-group mb-3">
-          <input id="urlInput" type="text" class="form-control" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button id="urlCopyButton" class="btn btn-outline-secondary" type="button">Copy</button>
-          </div>
-        </div>
-
-        <h3 class="lead">HTML</h3>
-        <div class="input-group mb-3">
-          <input id="htmlLink" type="text" class="form-control" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button id="htmlLinkButton" class="btn btn-outline-secondary" type="button">Copy</button>
-          </div>
-        </div>
-
-        <h3 class="lead">Markdown</h3>
-        <div class="input-group mb-3">
-          <input id="markdownLink" type="text" class="form-control" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button id="markdownLinkButton" class="btn btn-outline-secondary" type="button">Copy</button>
-          </div>
-        </div>
-
-        <!-- <h3 class="lead">Link list</h3>
-        <div class="input-group mb-3">
-          <ul id="linkList" class="list-group">
-            <li class="list-group-item">
-              <button id="newLinkButton" class="btn btn-outline-secondary" type="button">Copy</button>
-              Cras justo odio
-            </li>
-          </ul>
-        </div> -->
 
       </div>
     </div>
