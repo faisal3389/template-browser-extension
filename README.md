@@ -55,7 +55,6 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 - [lgarron/clipboard-polyfill: Sane copying on the web.](https://github.com/lgarron/clipboard-polyfill)
 - [Bootstrap · The most popular HTML, CSS, and JS library in the world.](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
-- [Popper.js](https://popper.js.org/)
 
 ## Possible extensions
 
