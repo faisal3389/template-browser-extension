@@ -1,28 +1,9 @@
-$("#aboutContent").hide();
-
-$("#aboutButton").click(() => {
-  $("#content").slideUp("slow", () => {
-    $("#aboutContent").slideDown("slow", () => {
-      $("#aboutContent").show();
-    });
-  })
-});
-
-$("#hideAboutButton").click(() => {
-  $("#aboutContent").slideUp("slow", () => {
-    $("#content").slideDown("slow", () => {
-      $("#content").show();
-    });
-  })
-})
-
 function onError(error) {
   alert(`Error: ${error}`);
 }
 
 function alertClipboardAndClose(name) {
   let alert = document.getElementById("alert")
-  $("#alert").hide();
   alert.textContent = "Copied " + name + " to Clipboard";
   alert.classList.add("alert", "alert-secondary")
   $("html, body").animate({ scrollTop: 0 }, "slow", () => {
