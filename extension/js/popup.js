@@ -60,7 +60,7 @@ function addLinkToList() {
 function copyInputToClipboard(elementID, name) {
   let e = document.getElementById(elementID)
   let dt = new clipboard.DT();
-  dt.setData("text/plain", e);
+  dt.setData("text/plain", e.value);
   clipboard.write(dt).then(alertClipboardAndClose(name));
 }
 
