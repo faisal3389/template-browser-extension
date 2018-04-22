@@ -10,22 +10,24 @@ This is useful to copy and paste links for webpages into blog posts, presentatio
 
 This works in both Firefox and Chrome. Follow the instructions below for each browser and the extension's icon should show in your browser. On mobiles it may be listed in the menu instead - try it out!
 
-### Firefox
+- [Link Formatter from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/link-formatter/)
+- [Link Formatter from Chrome web store](https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma)
 
-- Visit https://addons.mozilla.org/en-US/firefox/extensions/ and search for 'Link Formatter'
-- Direct link https://addons.mozilla.org/en-US/firefox/addon/link-formatter/
-- Click `Add to Firefox`
-
-### Chrome
-
-This works in Chrome too but is not yet listed in the Chrome web store.
+## Save locally and run extension
 
 - Save this project locally on your computer, eg cd to directory, `git clone git@github.com:ryandav/link-formatter.git`
+
+### Chrome
 - Visit `chrome://extensions/` in your Chrome browser
 - Click `Load Unpacked`
 - Select the folder you saved this in
 
-## Tutorials
+### Firefox
+- Visit `about:debugging`
+- Click on `Load Temporary Add-on`
+- Select the folder you saved this in
+
+## Web Extension Tutorials
 
 - https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox
 - https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension
