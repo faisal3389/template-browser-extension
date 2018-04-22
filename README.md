@@ -59,4 +59,4 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 ## Possible extensions
 
 - Ability to edit url and text that will then format the links accordingly
-- Remove link from list?
+- Link list: Remove link, order them, etc...
