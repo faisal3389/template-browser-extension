@@ -6,7 +6,7 @@ You can copy the formatted links to the clipboard, as well as add links to a lis
 
 This is useful to copy and paste links for webpages into blog posts, presentations, emails etc. The main motivation for making this was having to copy the title and url manually so many times.
 
-<a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/"><img src="images/creenshot.png" width="300"></a>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/"><img src="images/screenshot.png" width="300"></a>
 
 ## Usage
 
