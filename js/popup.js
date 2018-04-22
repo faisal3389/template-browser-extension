@@ -21,8 +21,11 @@ function alertClipboardAndClose(name) {
 let linkListStorage = localStorage.getItem("linkListStorage");
 console.log(linkListStorage)
 if(linkListStorage != undefined) {
+  console.log(linkListStorage)
   let linkList = document.getElementById("linkList")
-  linkList.outerHTML = linkListStorage
+  let parsedHtml = $.parseHTML(linkListStorage)
+  console.log(parsedHtml)
+  linkList.appendChild(parsedHtml[0])
 }
 
 function addLinkToList() {
