@@ -4,16 +4,16 @@ $("#listView").hide()
 
 let view = localStorage.getItem("view");
 
-if(view != undefined) {
-  console.log("Loading view: " + view)
+if(view === "listView") {
+  console.log("Loading listView")
   if(view === "listView") {
     $("#listView").show()
   }
-  else {
-    localStorage.setItem("view", "formatView");
-    console.log("Have not loaded specific view for " + view)
-    $("#formatView").show()
-  }
+}
+else {
+  localStorage.setItem("view", "formatView");
+  console.log("Loading formatView")
+  $("#formatView").show()
 }
 
 $("#aboutContent").hide();
