@@ -1,3 +1,21 @@
+$("#alert").hide()
+$("#formatView").hide()
+$("#listView").hide()
+
+let view = localStorage.getItem("view");
+
+if(view != undefined) {
+  console.log("Loading view: " + view)
+  if(view === "listView") {
+    $("#listView").show()
+  }
+  else {
+    localStorage.setItem("view", "formatView");
+    console.log("Have not loaded specific view for " + view)
+    $("#formatView").show()
+  }
+}
+
 $("#aboutContent").hide();
 
 $("#aboutButton").click(() => {
@@ -20,22 +38,22 @@ function onError(error) {
   alert(`Error: ${error}`);
 }
 
-$("#alert").hide()
-
 $("#alertCloseButton").click(() => {
   $("#alert").slideUp("slow");
 })
 
 $("#listViewButton").click(() => {
   $("#formatView").slideUp("slow", () => {
+    localStorage.setItem("view", "listView");
+    console.log("View set to " + localStorage.getItem("view"))
     $("#listView").slideDown("slow")
   });
 })
 
-$("#listView").hide()
-
 $("#formatViewButton").click(() => {
   $("#listView").slideUp("slow", () => {
+    localStorage.setItem("view", "formatView");
+    console.log("View set to " + localStorage.getItem("view"))
     $("#formatView").slideDown("slow")
   });
 })
@@ -62,6 +80,7 @@ if(linkListStorage != undefined) {
 }
 
 function addLinkToList() {
+  console.log("Adding link to list...")
   let link = document.getElementById('titleLink')
   let linkToAdd = link.cloneNode(true);
   let linkList = document.getElementById("linkList")
@@ -71,6 +90,17 @@ function addLinkToList() {
   localStorage.setItem("linkListStorage", linkList.innerHTML);
   console.log(localStorage.getItem("linkListStorage"))
 }
+
+function removeLinkFromList() {
+  console.log("Removing link from list...")
+  linkList.removeChild(linkList.lastChild);
+  localStorage.setItem("linkListStorage", linkList.innerHTML);
+  console.log(localStorage.getItem("linkListStorage"))
+}
+
+$("#removeLinkFromListButton").click(() => {
+  removeLinkFromList()
+})
 
 function copyInputToClipboard(elementID, name) {
   let e = document.getElementById(elementID)
