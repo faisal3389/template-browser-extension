@@ -62,3 +62,4 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 - Share button?
 - Scroll area for list of links
 - Investigate saving and loading link list better
+- Disable copy paste html links on mobile, and use share instead
