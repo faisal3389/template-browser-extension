@@ -26,6 +26,20 @@ $("#alertCloseButton").click(() => {
   $("#alert").slideUp("slow");
 })
 
+$("#listViewButton").click(() => {
+  $("#formatView").slideUp("slow", () => {
+    $("#listView").slideDown("slow")
+  });
+})
+
+$("#listView").hide()
+
+$("#formatViewButton").click(() => {
+  $("#listView").slideUp("slow", () => {
+    $("#formatView").slideDown("slow")
+  });
+})
+
 function alertClipboardAndClose(name) {
   let alertText = document.getElementById("alertText")
   alertText.textContent = "Copied " + name + " to Clipboard";
@@ -41,7 +55,10 @@ if(linkListStorage != undefined) {
   let linkList = document.getElementById("linkList")
   let parsedHtml = $.parseHTML(linkListStorage)
   console.log(parsedHtml)
-  linkList.appendChild(parsedHtml[0])
+  parsedHtml.forEach((li) => {
+    console.log("Adding to list: " + li)
+    linkList.append(li)
+  })
 }
 
 function addLinkToList() {
@@ -50,8 +67,8 @@ function addLinkToList() {
   let linkList = document.getElementById("linkList")
   let newLinkListElement = document.createElement("li")
   newLinkListElement.appendChild(linkToAdd)
-  linkList.appendChild(newLinkListElement)
-  localStorage.setItem("linkListStorage", linkList.outerHTML);
+  linkList.append(newLinkListElement)
+  localStorage.setItem("linkListStorage", linkList.innerHTML);
   console.log(localStorage.getItem("linkListStorage"))
 }
 
