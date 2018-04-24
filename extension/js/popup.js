@@ -20,19 +20,17 @@ function onError(error) {
   alert(`Error: ${error}`);
 }
 
+$("#alert").hide()
+
+$("#alertCloseButton").click(() => {
+  $("#alert").slideUp("slow");
+})
+
 function alertClipboardAndClose(name) {
-  let alert = document.getElementById("alert")
-  $("#alert").hide();
-  alert.textContent = "Copied " + name + " to Clipboard";
-  alert.classList.add("alert", "alert-secondary")
+  let alertText = document.getElementById("alertText")
+  alertText.textContent = "Copied " + name + " to Clipboard";
   $("html, body").animate({ scrollTop: 0 }, "slow", () => {
-    $("#alert").slideDown("slow", () => {
-      $("#content").slideUp("slow",() => {
-        $("#titleContent").fadeOut(2000, () => {
-          window.close()
-        });
-      })
-    });
+    $("#alert").slideDown("slow");
   });
 }
 
