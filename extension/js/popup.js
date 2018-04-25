@@ -2,6 +2,8 @@ $("#alert").hide()
 $("#formatView").hide()
 $("#listView").hide()
 
+let chosenFormat = localStorage.getItem("chosenFormat");
+
 let view = localStorage.getItem("view");
 
 if(view === "listView") {
@@ -58,12 +60,11 @@ $("#formatViewButton").click(() => {
   });
 })
 
-function alertClipboardAndClose(name) {
+function alertClipboard(name) {
   let alertText = document.getElementById("alertText")
   alertText.textContent = "Copied " + name + " to Clipboard";
-  $("html, body").animate({ scrollTop: 0 }, "slow", () => {
-    $("#alert").slideDown("slow");
-  });
+  $("#alert").show()
+  $("html, body").animate({ scrollTop: 0 }, "slow")
 }
 
 let linkListStorage = localStorage.getItem("linkListStorage");
@@ -85,6 +86,7 @@ function addLinkToList() {
   let linkToAdd = link.cloneNode(true);
   let linkList = document.getElementById("linkList")
   let newLinkListElement = document.createElement("li")
+  newLinkListElement.classList.add("list-group-item")
   newLinkListElement.appendChild(linkToAdd)
   linkList.append(newLinkListElement)
   localStorage.setItem("linkListStorage", linkList.innerHTML);
@@ -106,24 +108,11 @@ function copyInputToClipboard(elementID, name) {
   let e = document.getElementById(elementID)
   let dt = new clipboard.DT();
   dt.setData("text/plain", e.value);
-  clipboard.write(dt).then(alertClipboardAndClose(name));
-}
-
-function copyHtmlToClipboard(elementID, name) {
-  let e = document.getElementById(elementID)
-  let dt = new clipboard.DT();
-  dt.setData("text/plain", e);
-  dt.setData("text/html", e.outerHTML);
-  clipboard.write(dt).then(alertClipboardAndClose(name));
+  clipboard.write(dt).then(alertClipboard(name));
 }
 
 addLinkToListButton = document.getElementById("addLinkToListButton")
 addLinkToListButton.addEventListener("click", addLinkToList)
-
-copyListButton = document.getElementById("copyListButton")
-copyListButton.addEventListener("click", function(){
-  copyHtmlToClipboard("linkList", "Link List")
-})
 
 clearListButton = document.getElementById("clearListButton")
 clearListButton.addEventListener("click", function(){
@@ -158,10 +147,6 @@ function addLinksFromTab(tabs) {
   markdownLinkElement = document.getElementById('markdownLink')
   markdownLinkElement.value = markdownLink;
 }
-
-document.getElementById("linkCopyButton").addEventListener("click", function(){
-    copyHtmlToClipboard("titleLink", "Link");
-});
 
 document.getElementById("titleCopyButton").addEventListener("click", function(){
     copyInputToClipboard("titleInput", "Title");
