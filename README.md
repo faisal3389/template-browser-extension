@@ -58,8 +58,7 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 
 ## Possible extensions
 
-- Ability to edit url and text that will then format the links accordingly
+- Consider refactoring popup.js into multiple files focused on areas of the extension
 - Share button?
-- Scroll area for list of links
 - Investigate saving and loading link list better
-- Disable copy paste html links on mobile, and use share instead
+- Design, eg use materialize or try Bootstrap theme?
