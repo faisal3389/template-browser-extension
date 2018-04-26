@@ -60,13 +60,6 @@ $("#formatViewButton").click(() => {
   });
 })
 
-function alertClipboard(name) {
-  let alertText = document.getElementById("alertText")
-  alertText.textContent = "Copied " + name + " to Clipboard";
-  $("#alert").show()
-  $("html, body").animate({ scrollTop: 0 }, "slow")
-}
-
 let linkListStorage = localStorage.getItem("linkListStorage");
 
 if(linkListStorage != undefined) {
@@ -104,11 +97,17 @@ $("#removeLinkFromListButton").click(() => {
   removeLinkFromList()
 })
 
-function copyInputToClipboard(elementID, name) {
-  let e = document.getElementById(elementID)
+function copyInputToClipboard(elementId, name, feedbackElementId) {
+  let e = document.getElementById(elementId)
   let dt = new clipboard.DT();
   dt.setData("text/plain", e.value);
-  clipboard.write(dt).then(alertClipboard(name));
+  clipboard.write(dt).then(() => {
+    document.getElementById("titleFeedback").textContent = ""
+    document.getElementById("urlFeedback").textContent = ""
+    document.getElementById("htmlLinkFeedback").textContent = ""
+    document.getElementById("markdownLinkFeedback").textContent = ""
+    document.getElementById(feedbackElementId).textContent = "Copied to Clipboard"
+  })
 }
 
 addLinkToListButton = document.getElementById("addLinkToListButton")
@@ -149,19 +148,19 @@ function addLinksFromTab(tabs) {
 }
 
 document.getElementById("titleCopyButton").addEventListener("click", function(){
-    copyInputToClipboard("titleInput", "Title");
+    copyInputToClipboard("titleInput", "Title", "titleFeedback");
 });
 
 document.getElementById("urlCopyButton").addEventListener("click", function(){
-    copyInputToClipboard("urlInput", "Url");
+    copyInputToClipboard("urlInput", "Url", "urlFeedback");
 });
 
 document.getElementById("htmlLinkButton").addEventListener("click", function(){
-    copyInputToClipboard("htmlLink", "HTML Link");
+    copyInputToClipboard("htmlLink", "HTML Link", "htmlLinkFeedback");
 });
 
 document.getElementById("markdownLinkButton").addEventListener("click", function(){
-    copyInputToClipboard("markdownLink", "Markdown Link");
+    copyInputToClipboard("markdownLink", "Markdown Link", "markdownLinkFeedback");
 });
 
 let sBrowser, sUsrAg = navigator.userAgent;
