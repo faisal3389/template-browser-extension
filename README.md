@@ -55,10 +55,11 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 - [lgarron/clipboard-polyfill: Sane copying on the web.](https://github.com/lgarron/clipboard-polyfill)
 - [Bootstrap · The most popular HTML, CSS, and JS library in the world.](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
+- [Bootswatch.com theme Flatly](https://bootswatch.com/flatly/)
 
 ## Possible extensions
 
-- Consider refactoring popup.js into multiple files focused on areas of the extension
+- Consider refactoring popup.js into multiple files focused on areas of the extension. Try ES6 syntax and post on Medium?
 - Share button?
 - Investigate saving and loading link list better
-- Design, eg use materialize or try Bootstrap theme?
+- Add navbar with menu: about, choice of light and dark themes?
