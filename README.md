@@ -15,7 +15,7 @@
 
 A browser extension to format and copy links.
 
-![Link Formatter icon](images/link-formatter-icon-128x128.png")
+![Link Formatter icon](images/link-formatter-icon-128x128.png)
 
 ## Usage
 
