@@ -13,7 +13,12 @@
 
 # Link Formatter
 
+<p>
+<img src="images/link-formatter-icon-128x128.png"/>
+
 A browser extension to format and copy links.
+
+</p>
 
 <img src="images/screenshot.png" width="300">
 
