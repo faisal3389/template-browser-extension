@@ -9,7 +9,7 @@
 
 # Link Formatter
 
-A web extension for browsers to format and copy links.
+A browser extension to format and copy links.
 
 <a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/"><img src="images/screenshot.png" width="300"></a>
 
