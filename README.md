@@ -1,9 +1,9 @@
 <p align="left">
   <a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/">
-    <img src="images/FirefoxAddOns.png" width="300" style="border-radius: 10%;"/>
+    <img src="images/FirefoxAddOns.png" width="300" style="border-radius: 10px;"/>
   </a>
   <a href="https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma">
-    <img src="images/ChromeWebStore.png" width="300" style="border-radius: 10%;"/>
+    <img src="images/ChromeWebStore.png" width="300" style="border-radius: 10px;"/>
   </a>
 </p>
 
@@ -24,31 +24,34 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 - [Link Formatter from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/link-formatter/)
 - [Link Formatter from Chrome web store](https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma)
 
-## Save locally and run extension
+## Save locally on your computer and run extension
 
-- Save this project locally on your computer, eg cd to directory, `git clone git@github.com:ryandav/link-formatter.git`
+- Open your terminal
+- cd to a directory where you want to save this 
+- run: `git clone git@github.com:ryandav/link-formatter.git`
+- Then open the browser you wish to use it in and follow the below instructions
 
-### Chrome
+#### Chrome
 - Visit `chrome://extensions/` in your Chrome browser
 - Click `Load Unpacked`
 - Select the folder you saved this in
 
-### Firefox
+#### Firefox
 - Visit `about:debugging`
 - Click on `Load Temporary Add-on`
 - Select the folder you saved this in
 
 ## Web Extension Tutorials
 
-- https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox
-- https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension
-- https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js
-- https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types
+- [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
+- [https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js)
+- [https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)
 
 ## References
 
-- https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549 The post that I read by Quincy Larson on Medium that led me to try out the below Anchor Links Chrome Extension
-- https://github.com/castroalves/anchor-links This inspired me to write this Chrome extension as it is used for making it easier to add links to specific sections of your blog post on Medium
+- [https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549](https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549) The post that I read by Quincy Larson on Medium that led me to try out the below Anchor Links Chrome Extension
+- [https://github.com/castroalves/anchor-links](https://github.com/castroalves/anchor-links) This inspired me to write this Chrome extension as it is used for making it easier to add links to specific sections of your blog post on Medium
 
 ## Libraries used
 
