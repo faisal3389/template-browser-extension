@@ -9,9 +9,7 @@
 
 # Link Formatter
 
-An extension/add-on for browsers to format links. When you click on the extension it will display the link of the current tab as an anchor link, html and markdown.
-
-You can copy the formatted links to the clipboard, as well as add links to a list and then copy the whole list.
+A web extension for browsers to format links. When you click on the extension in the browser toolbar to display the link with html and markdown formats. You can amend the link text and url to customise it, then click on the copy buttons to copy to the computer's clipboard.
 
 This is useful to copy and paste links for webpages into blog posts, presentations, emails etc. The main motivation for making this was having to copy the title and url manually so many times.
 
@@ -19,15 +17,19 @@ This is useful to copy and paste links for webpages into blog posts, presentatio
 
 ## Usage
 
+Once you have installed this, click on the icon in your browser toolbar
+
+## Installation
+
 This works in both Firefox and Chrome. Follow the instructions below for each browser and the extension's icon should show in your browser. On mobiles it may be listed in the menu instead - try it out!
 
 - [Link Formatter from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/link-formatter/)
 - [Link Formatter from Chrome web store](https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma)
 
-## Save locally on your computer and run extension
+### Save locally on your computer and run extension
 
 - Open your terminal
-- cd to a directory where you want to save this 
+- cd to a directory where you want to save this
 - run: `git clone git@github.com:ryandav/link-formatter.git`
 - Then open the browser you wish to use it in and follow the below instructions
 
@@ -43,15 +45,13 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 
 ## Web Extension Tutorials
 
-- [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-- [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
-- [https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js)
-- [https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)
+- [WebExtensions Temporary installation in Firefox - Mozilla | MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [Your second web extension - Mozilla | MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
 
 ## References
 
-- [https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549](https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549) The post that I read by Quincy Larson on Medium that led me to try out the below Anchor Links Chrome Extension
-- [https://github.com/castroalves/anchor-links](https://github.com/castroalves/anchor-links) This inspired me to write this Chrome extension as it is used for making it easier to add links to specific sections of your blog post on Medium
+- [How to link to a specific paragraph in your Medium article (2018 Table of Contents method)](https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549) The post that I read by Quincy Larson on Medium that led me to try out the below Anchor Links Chrome Extension
+- [castroalves/anchor-links: Anchor Links is a free Chrome Extension to add anchor links to Medium and WordPress posts.](https://github.com/castroalves/anchor-links) This inspired me to write this Chrome extension as it is used for making it easier to add links to specific sections of your blog post on Medium
 
 ## Libraries used
 
@@ -59,10 +59,3 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 - [Bootstrap · The most popular HTML, CSS, and JS library in the world.](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
 - [Bootswatch.com theme Flatly](https://bootswatch.com/flatly/)
-
-## Possible extensions
-
-- Consider refactoring popup.js into multiple files focused on areas of the extension. Try ES6 syntax and post on Medium?
-- Share button?
-- Investigate saving and loading link list better
-- Add navbar (rounded corners?) with menu: about, choice of light and dark themes?
