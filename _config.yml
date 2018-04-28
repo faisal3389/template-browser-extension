@@ -1,1 +1,16 @@
 theme: jekyll-theme-minimal
+
+# If you are building a GitHub project page then use these settings:
+url: "http://ryandav.github.io/link-formatter"
+baseurl: "/link-formatter"
+
+social-network-links:
+  github: ryandav
+  twitter: ryanwhocodes
+
+share-links-active:
+  twitter: true
+
+# Exclude these files from production site
+exclude:
+  - extension/*
