@@ -62,4 +62,4 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 - Consider refactoring popup.js into multiple files focused on areas of the extension. Try ES6 syntax and post on Medium?
 - Share button?
 - Investigate saving and loading link list better
-- Add navbar with menu: about, choice of light and dark themes?
+- Add navbar (rounded corners?) with menu: about, choice of light and dark themes?
