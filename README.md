@@ -21,11 +21,11 @@ Install the extension (see options below) and click on the icon in your browser 
 
 ![Link Formatter icon](images/link-formatter-icon-128x128.png)
 
-It will display the tab's link text and url, along with html and markdown formats
+It will display the tab's link text and url, along with html and markdown formats. You can amend or change the link text and url and the html and markdown links with be automatically updated.
 
 <img src="images/screenshot.png" width="300">
 
-You can amend the link text and url to customise it (the html and markdown links with be automatically updated) then copy and paste into your webpages, blog posts, emails, presentations, etc.
+You can then easily copy and paste into your webpages, blog posts, emails, presentations, etc.
 
 ## Installation
 
