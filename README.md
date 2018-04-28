@@ -15,18 +15,17 @@
 
 A browser extension to format and copy links.
 
-<img src="images/screenshot.png" width="300">
-
 ## Usage
 
-- Install the extension (see options below) and click on the icon in your browser toolbar that looks like this:
+Install the extension (see options below) and click on the icon in your browser toolbar that looks like this:
 
 ![Link Formatter icon](images/link-formatter-icon-128x128.png)
 
-- It will display the tab's link text and url, along with html and markdown formats
-- You can amend the link text and url to customise it, and the html and markdown links with be automatically updated.
-- Click on the copy buttons to copy to the computer's clipboard.
-- Paste them into your webpages, blog posts, emails, presentations... etc!
+It will display the tab's link text and url, along with html and markdown formats
+
+<img src="images/screenshot.png" width="300">
+
+You can amend the link text and url to customise it, and the html and markdown links with be automatically updated. Click on the copy buttons to copy to the computer's clipboard, then you can paste into your webpages, blog posts, emails, presentations... etc!
 
 ## Installation
 
