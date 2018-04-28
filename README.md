@@ -13,14 +13,9 @@
 
 # Link Formatter
 
-<p>
-<img src="images/link-formatter-icon-128x128.png"/>
-
 A browser extension to format and copy links.
 
-</p>
-
-<img src="images/screenshot.png" width="300">
+![Link Formatter icon](images/link-formatter-icon-128x128.png")
 
 ## Usage
 
@@ -30,6 +25,8 @@ A browser extension to format and copy links.
 - You can amend the link text and url to customise it, and the html and markdown links with be automatically updated.
 - Click on the copy buttons to copy to the computer's clipboard.
 - Paste them into your webpages, blog posts, emails, presentations... etc!
+
+<img src="images/screenshot.png" width="300">
 
 ## Installation
 
