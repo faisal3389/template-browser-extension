@@ -1,9 +1,9 @@
 <p align="left">
   <a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/">
-    <img src="images/FirefoxAddOns.png" width="300" style="border-radius: 10%;"/>
+    <img src="images/FirefoxAddOns.png" width="300" style="border-radius: 10px;"/>
   </a>
   <a href="https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma">
-    <img src="images/ChromeWebStore.png" width="300" style="border-radius: 10%;"/>
+    <img src="images/ChromeWebStore.png" width="300" style="border-radius: 10px;"/>
   </a>
 </p>
 
