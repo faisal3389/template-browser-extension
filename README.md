@@ -25,7 +25,7 @@ It will display the tab's link text and url, along with html and markdown format
 
 <img src="images/screenshot.png" width="300">
 
-You can amend the link text and url to customise it, and the html and markdown links with be automatically updated. Click on the copy buttons to copy to the computer's clipboard, then you can paste into your webpages, blog posts, emails, presentations... etc!
+You can amend the link text and url to customise it (the html and markdown links with be automatically updated) then copy and paste into your webpages, blog posts, emails, presentations, etc.
 
 ## Installation
 
