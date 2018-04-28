@@ -1,8 +1,10 @@
 // Link Formatter js
 
+// hide the alert until a copy button pressed
 $('#alert').hide()
 
-$( "#titleInput" ).keyup(function() {
+// These are for updating the formatted links when user amends link text or url
+$( "#textInput" ).keyup(function() {
   updateLinkFormats()
 });
 
@@ -10,7 +12,7 @@ $( "#urlInput" ).keyup(function() {
   updateLinkFormats()
 });
 
-$("#titleInput").change(()=> {
+$("#textInput").change(()=> {
   updateLinkFormats()
 });
 
@@ -18,12 +20,14 @@ $("#urlInput").change(()=> {
   updateLinkFormats()
 });
 
+// to close the alert
 $("#hideAlert").click(()=> {
   $('#alert').hide()
 });
 
-$("#titleCopyButton").click(()=> {
-  copyInputToClipboard("#titleInput", "Title")
+// Copy button events
+$("#textCopyButton").click(()=> {
+  copyInputToClipboard("#textInput", "Title")
 });
 
 $("#urlCopyButton").click(()=> {
@@ -56,21 +60,22 @@ function copyInputToClipboard(elementId, contentName) {
 }
 
 function updateLinkFormats() {
-  let linkTitle = $('#titleInput').val();
+  let linkText = $('#textInput').val();
   let linkUrl = $('#urlInput').val();
-  $('#htmlLinkInput').val("<a href=\"" + linkUrl + "\">" + linkTitle + "</a>")
-  $('#markdownLinkInput').val("[" + linkTitle + "](" + linkUrl + ")")
+  $('#htmlLinkInput').val("<a href=\"" + linkUrl + "\">" + linkText + "</a>")
+  $('#markdownLinkInput').val("[" + linkText + "](" + linkUrl + ")")
 }
 
 function addLinksFromTab(tabs) {
   tab = tabs[0]
-  let linkTitle = tab.title;
+  let linkText = tab.title;
   let linkUrl = tab.url;
-  $('#titleInput').val(linkTitle);
+  $('#textInput').val(linkText);
   $('#urlInput').val(linkUrl);
   updateLinkFormats()
 }
 
+// To enable cross browser use you need to see if this is Chrome or not
 if(navigator.userAgent.indexOf("Chrome") > -1) {
   chrome.tabs.query({active: true, currentWindow: true}, function(arrayOfTabs) {
     addLinksFromTab(arrayOfTabs);
