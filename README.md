@@ -1,6 +1,5 @@
-<head>
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-</head>
+<link rel="shortcut icon" type="image/png"
+      href="{{ "images/favicon.png"  | absolute_url }}">
 
 <p align="left">
   <a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/">
