@@ -3,11 +3,11 @@
   "name": "Link Formatter",
   "description": "Link Formatter - A browser extension to format and copy links.",
   "homepage_url": "https://github.com/ryandav/link-formatter",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "browser_action": {
    "default_popup": "popup.html",
    "default_title": "Link Formatter",
-   "default_icons": {
+   "default_icon": {
        "16": "icons/link-formatter-icon-16x16.png",
        "32": "icons/link-formatter-icon-32x32.png",
        "48": "icons/link-formatter-icon-48x48.png",
