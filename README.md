@@ -43,11 +43,6 @@ This works in both Firefox and Chrome. Follow the instructions below for each br
 - Click on `Load Temporary Add-on`
 - Select the folder you saved this in
 
-## Web Extension Tutorials
-
-- [WebExtensions Temporary installation in Firefox - Mozilla | MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-- [Your second web extension - Mozilla | MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
-
 ## References
 
 - [How to link to a specific paragraph in your Medium article (2018 Table of Contents method)](https://medium.freecodecamp.org/how-to-link-to-a-specific-paragraph-in-your-medium-article-2018-table-of-contents-method-e66595fea549) The post that I read by Quincy Larson on Medium that led me to try out the below Anchor Links Chrome Extension
