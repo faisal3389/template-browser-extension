@@ -3,14 +3,26 @@
   "name": "Link Formatter",
   "description": "Link Formatter - A browser extension to format and copy links.",
   "homepage_url": "https://github.com/ryandav/link-formatter",
-  "version": "3.3",
+  "version": "3.3.1",
   "browser_action": {
    "default_popup": "popup.html",
    "default_title": "Link Formatter",
-   "default_icon": {
-      "32": "icons/icon32.png",
-      "64": "icons/icon64.png"
-   }
+   "default_icons": {
+       "16": "icons/link-formatter-icon-16x16.png",
+       "32": "icons/link-formatter-icon-32x32.png",
+       "48": "icons/link-formatter-icon-48x48.png",
+       "64": "icons/link-formatter-icon-64x64.png",
+       "96": "icons/link-formatter-icon-96x96.png",
+       "128": "icons/icons/link-formatter-icon-128x128.png"
+    }
+  },
+  "icons" : {
+    "16": "icons/link-formatter-icon-16x16.png",
+    "32": "icons/link-formatter-icon-32x32.png",
+    "48": "icons/link-formatter-icon-48x48.png",
+    "64": "icons/link-formatter-icon-64x64.png",
+    "96": "icons/link-formatter-icon-96x96.png",
+    "128": "icons/icons/link-formatter-icon-128x128.png"
   },
   "permissions": [
     "tabs"
