@@ -13,7 +13,7 @@
        "48": "icons/link-formatter-icon-48x48.png",
        "64": "icons/link-formatter-icon-64x64.png",
        "96": "icons/link-formatter-icon-96x96.png",
-       "128": "icons/icons/link-formatter-icon-128x128.png"
+       "128": "icons/link-formatter-icon-128x128.png"
     }
   },
   "icons" : {
@@ -22,7 +22,7 @@
     "48": "icons/link-formatter-icon-48x48.png",
     "64": "icons/link-formatter-icon-64x64.png",
     "96": "icons/link-formatter-icon-96x96.png",
-    "128": "icons/icons/link-formatter-icon-128x128.png"
+    "128": "icons/link-formatter-icon-128x128.png"
   },
   "permissions": [
     "tabs"
