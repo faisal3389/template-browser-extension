@@ -4,8 +4,8 @@
   <head>
     <title>Link Formatter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/themes/flatly/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="/css/themes/flatly/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 400px)" href="css/desktop-style.css">
     <script src="js/jquery.js"></script>
     <script src="js/clipboard-polyfill.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -13,118 +13,58 @@
 
   <body>
     <div class="container">
-      <div id="titleContent">
-        <h1>Link Formatter</h1>
-      </div>
+      <div class="row">
+        <div class="col-sm-12">
 
-      <div id="content">
-        <div class="row">
-          <div class="col-sm-12">
+          <p>
+            <a href="https://ryandav.github.io/link-formatter/">
+              <h2>Link Formatter</h2>
+            </a>
+          </p>
 
-            <h3 class="lead">Link</h3>
-            <div class="input-group mb-3">
-              <a id="titleLink" href="#"></a>
+          <p>
+            <div id="alert" class="alert alert-dismissible alert-success" role="alert">
+              <button id="hideAlert" type="button" class="close">&times;</button>
+              <span id="alertText"></span>
             </div>
+          </p>
 
-            <div id="formatView">
-              <div class="input-group mb-3">
-                <button id="listViewButton" class="btn btn-success btn-block" type="button">List View</button>
-              </div>
-
-              <h3 class="lead">Title</h3>
-              <div class="input-group mb-3 has-success">
-                <input id="titleInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button id="titleCopyButton" class="btn btn-success" type="button">Copy</button>
-                </div>
-                <div id="titleFeedback" class="valid-feedback"></div>
-              </div>
-
-              <h3 class="lead">Url</h3>
-              <div class="input-group mb-3 has-success">
-                <input id="urlInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button id="urlCopyButton" class="btn btn-success" type="button">Copy</button>
-                </div>
-                <div id="urlFeedback" class="valid-feedback"></div>
-              </div>
-
-              <h3 class="lead">HTML</h3>
-              <div class="input-group mb-3 has-success">
-                <input id="htmlLink" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button id="htmlLinkButton" class="btn btn-success" type="button">Copy</button>
-                </div>
-                <div id="htmlLinkFeedback" class="valid-feedback"></div>
-              </div>
-
-              <h3 class="lead">Markdown</h3>
-              <div class="input-group mb-3 has-success">
-                <input id="markdownLink" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button id="markdownLinkButton" class="btn btn-success" type="button">Copy</button>
-                </div>
-                <div id="markdownLinkFeedback" class="valid-feedback"></div>
-              </div>
-            </div>
-
-            <div id="listView">
-              <div class="input-group mb-3">
-                <button id="formatViewButton" class="btn btn-success btn-block" type="button">Format View</button>
-              </div>
-
-              <h3 class="lead">Link list</h3>
-              <div class="input-group mb-3">
-                <div class="btn-group btn-group-justified">
-                  <div class="btn-group">
-                    <button id="addLinkToListButton" class="btn btn-block btn-success" type="button">Add</button>
-                  </div>
-                  <div class="btn-group">
-                    <button id="removeLinkFromListButton" class="btn btn-block btn-success" type="button">Remove</button>
-                  </div>
-                  <div class="btn-group">
-                    <button id="clearListButton" class="btn btn-block btn-success" type="button">Clear</button>
-                  </div>
-                </div>
-              </div>
-
-              <ul id="linkList" class="list-group">
-              </ul>
-            </div>
-
-            <hr>
-            <div class="input-group mb-3">
-              <button id="aboutButton" class="btn btn-outline-success btn-block" type="button" name="button">About</button>
+          <h3 class="lead">Title</h3>
+          <div class="input-group mb-3 has-success">
+            <input id="titleInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button id="titleCopyButton" class="btn btn-success" type="button">Copy</button>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div id="aboutContent">
-        <div class="row">
-          <div class="col-sm-12">
-            <h3 class="lead">About</h3>
-            <p>
-            When you click on the extension it displays the link of the current tab as an anchor link, html and markdown.
-            </p>
-            <p>
-            You can copy the links to the clipboard, as well as add links to a list and then copy the whole list.
-            </p>
-            <p>
-              View the Link Formatter source code and Readme on GitHub at
-              <a href="https://github.com/ryandav/link-formatter">
-                github.com/ryandav/link-formatter
-              </a>
-            </p>
-            <hr>
-            <div class="input-group mb-3">
-              <button id="hideAboutButton" class="btn btn-outline-success btn-block" type="button" name="button">Hide</button>
+          <h3 class="lead">Url</h3>
+          <div class="input-group mb-3 has-success">
+            <input id="urlInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button id="urlCopyButton" class="btn btn-success" type="button">Copy</button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+
+          <h3 class="lead">HTML</h3>
+          <div class="input-group mb-3 has-success">
+            <input id="htmlLinkInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button id="htmlLinkCopyButton" class="btn btn-success" type="button">Copy</button>
+            </div>
+          </div>
+
+          <h3 class="lead">Markdown</h3>
+          <div class="input-group mb-3 has-success">
+            <input id="markdownLinkInput" type="text" class="form-control is-valid" aria-label="Markdown link">
+            <div class="input-group-append">
+              <button id="markdownLinkCopyButton" class="btn btn-success">Copy</button>
+            </div>
+          </div>
+
+        </div> <!-- end col -->
+      </div> <!-- end row -->
+    </div> <!-- end container -->
     <script src="js/popup.js"></script>
-
   </body>
+
 </html>
