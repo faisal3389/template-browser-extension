@@ -9,15 +9,18 @@
 
 # Link Formatter
 
-A web extension for browsers to format links. When you click on the extension in the browser toolbar to display the link with html and markdown formats. You can amend the link text and url to customise it, then click on the copy buttons to copy to the computer's clipboard.
-
-This is useful to copy and paste links for webpages into blog posts, presentations, emails etc. The main motivation for making this was having to copy the title and url manually so many times.
+A web extension for browsers to format and copy links.
 
 <a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/"><img src="images/screenshot.png" width="300"></a>
 
 ## Usage
 
-Once you have installed this, click on the icon in your browser toolbar
+- Install the extension (see options below)
+- Click on the icon in your browser toolbar
+- It will display the tab's link text and url, along with html and markdown formats
+- You can amend the link text and url to customise it, and the html and markdown links with be automatically updated.
+- Click on the copy buttons to copy to the computer's clipboard.
+- Paste them into your webpages, blog posts, emails, presentations... etc!
 
 ## Installation
 
