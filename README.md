@@ -1,3 +1,7 @@
+<head>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+</head>
+
 <p align="left">
   <a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/">
     <img src="images/FirefoxAddOns.png" width="300" style="border-radius: 10px;"/>
