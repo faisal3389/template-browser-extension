@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Link Formatter",
-  "description": "Link Formatter - Click me to get formatted links based on the page title and url",
+  "description": "Link Formatter - A browser extension to format and copy links.",
   "homepage_url": "https://github.com/ryandav/link-formatter",
   "version": "3.3",
   "browser_action": {
@@ -13,7 +13,6 @@
    }
   },
   "permissions": [
-    "tabs",
-    "storage"
+    "tabs"
   ]
 }
