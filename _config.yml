@@ -11,6 +11,5 @@ social-network-links:
 share-links-active:
   twitter: true
 
-# Exclude these files from production site
 exclude:
   - extension/*
