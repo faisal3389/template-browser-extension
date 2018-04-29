@@ -17,7 +17,7 @@ A browser extension to format and copy links.
 
 ## Usage
 
-Install the extension (see options below) and click on the icon in your browser toolbar that looks like this:
+Install the extension (see options below). On Firefox mobile select it from the browser menu. On Chrome and Firefox desktop click on the icon in your browser toolbar that looks like this:
 
 ![Link Formatter icon](images/link-formatter-icon-128x128.png)
 
@@ -29,7 +29,7 @@ You can then easily copy and paste into your webpages, blog posts, emails, prese
 
 ## Installation
 
-This works in both Firefox and Chrome. Follow the instructions below for each browser and the extension's icon should show in your browser. On mobiles it may be listed in the menu instead - try it out!
+This is available for both Firefox and Chrome.
 
 - [Link Formatter from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/link-formatter/)
 - [Link Formatter from Chrome web store](https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma)
