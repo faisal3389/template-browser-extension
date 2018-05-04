@@ -76,13 +76,13 @@ function addLinksFromTab(tabs) {
 }
 
 // To enable cross browser use you need to see if this is Chrome or not
-if(navigator.userAgent.indexOf("Chrome") > -1) {
+if(chrome !== undefined) {
   chrome.tabs.query({active: true, currentWindow: true}, function(arrayOfTabs) {
     addLinksFromTab(arrayOfTabs);
   });
   // This enables links to be opened in new tabs
   window.addEventListener('click',function(e){
-    if(e.target.href!==undefined){
+    if(e.target.href !== undefined){
       chrome.tabs.create({url:e.target.href})
     }
   })
@@ -91,7 +91,7 @@ if(navigator.userAgent.indexOf("Chrome") > -1) {
     .then(addLinksFromTab);
   // This enables links to be opened in new tabs
   window.addEventListener('click',function(e){
-    if(e.target.href!==undefined){
+    if(e.target.href !== undefined){
       browser.tabs.create({url:e.target.href})
     }
   })
