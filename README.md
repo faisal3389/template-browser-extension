@@ -2,7 +2,9 @@
 
 A template browser extension. This designed to be a quick way to setup a browser extension.
 
-<img src="images/screenshot.png" width="300px" style="border: 1px solid black;">
+<table><tr><td>
+  <img src="images/screenshot.png" width="400px" style="border: 1px solid black;">
+</td></tr></table>
 
 ### Save locally on your computer and run extension
 
