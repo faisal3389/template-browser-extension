@@ -54,32 +54,16 @@ const addLinkDataFromTab = (tabs) => {
 }
 
 // To enable cross-browser use you need to see if this is Chrome or not
-if(chrome !== undefined) {
-  try {
-    chrome.tabs.query(
-      {active: true, currentWindow: true},
-      (arrayOfTabs) => { addLinkDataFromTab(arrayOfTabs) }
-    );
-  }
-  catch(error) {
-    alertError(error, "Error occurred when trying to get current tab info")
-  }
+if(chrome) {
+  chrome.tabs.query(
+    {active: true, currentWindow: true},
+    (arrayOfTabs) => { addLinkDataFromTab(arrayOfTabs) }
+  );
   // This enables links to be opened in new tabs
-  window.addEventListener('click', (event) => {
-    if(event.target.href !== undefined){
-      chrome.tabs.create({url:event.target.href})
-    }
-  })
+  $('a').click( (event) => { chrome.tabs.create({url:event.target.href}) } )
 } else {
   browser.tabs.query({active: true, currentWindow: true})
     .then(addLinkDataFromTab)
-    .catch((error) => {
-      alertError(error, "Error occurred when trying to get current tab info")
-    })
   // This enables links to be opened in new tabs
-  window.addEventListener('click', (event) => {
-    if(event.target.href !== undefined){
-      browser.tabs.create({url:event.target.href})
-    }
-  })
+  $('a').click( (event) => { browser.tabs.create({url:event.target.href}) } )
 }

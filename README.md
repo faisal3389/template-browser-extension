@@ -1,34 +1,8 @@
-<p align="left">
-  <a href="https://addons.mozilla.org/en-US/firefox/addon/link-formatter/">
-    <img src="images/FirefoxAddOns.png" width="300" style="border-radius: 10px;"/>
-  </a>
-  <a href="https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma">
-    <img src="images/ChromeWebStore.png" width="300" style="border-radius: 10px;"/>
-  </a>
-</p>
-
 # Link Formatter
 
-A browser extension to format and copy links.
-
-## Usage
-
-Install the extension (see options below). On Firefox mobile select it from the browser menu. On Chrome and Firefox desktop click on the icon in your browser toolbar that looks like this:
-
-![Link Formatter icon](images/link-formatter-icon-128x128.png)
-
-It will display the tab's link text and url, along with html and markdown formats. You can amend or change the link text and url and the html and markdown links with be automatically updated.
-
-<img src="images/screenshot.png" width="300">
-
-You can then easily copy and paste into your webpages, blog posts, emails, presentations, etc.
+A template browser extension.
 
 ## Installation
-
-This is available for both Firefox and Chrome.
-
-- [Link Formatter from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/link-formatter/)
-- [Link Formatter from Chrome web store](https://chrome.google.com/webstore/detail/link-formatter/ahppkjpijfgfcdpailnodpieckleplma)
 
 ### Save locally on your computer and run extension
 
