@@ -64,7 +64,7 @@ extension
 - [jQuery](https://jquery.com/)
 - [Bootswatch.com theme Flatly](https://bootswatch.com/flatly/)
 
-# Resources, guides and tutorials
+## Resources, guides and tutorials
 
 The following pages were helpful when creating a web extension.
 
