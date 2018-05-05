@@ -17,41 +17,29 @@
         <div class="col-sm-12">
 
           <p>
-            <a href="https://ryandav.github.io/link-formatter/">
-              <h2>Link Formatter</h2>
-            </a>
+            <h2>Template Browser Extension</h2>
           </p>
 
           <p>
-            <div id="alert" class="alert alert-dismissible alert-success" role="alert">
+            <div id="alert" class="alert alert-dismissible alert-primary" role="alert">
               <button type="button" class="close">&times;</button>
               <span id="alertText"></span>
             </div>
           </p>
 
-          <h3 class="lead">Text</h3>
-          <div class="input-group mb-3 has-success">
-            <input id="textInput"
-            type="text"
-            class="form-control is-valid"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="top"
-            data-content="Copied Text to Clipboard"
-            >
-            <div class="input-group-append">
-              <button id="textCopyButton"
-                class="btn btn-success"
-                type="button">
-                Copy
-              </button>
-            </div>
-          </div>
+          <p>
+            <a href="https://github.com/ryandav/template-browser-extension"
+            class="btn btn-primary btn-block">
+              About
+            </a>
+          </p>
+
+          <h3 id="tabTitle" class="lead">Tab title</h3>
 
           <h3 class="lead">Url</h3>
-          <div class="input-group mb-3 has-success">
+          <div class="input-group mb-3">
             <input id="urlInput" type="text"
-            class="form-control is-valid"
+            class="form-control"
             data-container="body"
             data-toggle="popover"
             data-placement="top"
@@ -59,44 +47,8 @@
             >
             <div class="input-group-append">
               <button id="urlCopyButton"
-                class="btn btn-success"
+                class="btn btn-primary"
                 type="button">
-                Copy
-              </button>
-            </div>
-          </div>
-
-          <h3 class="lead">HTML</h3>
-          <div class="input-group mb-3 has-success">
-            <input id="htmlLinkInput"
-              type="text"
-              class="form-control is-valid"
-              data-container="body"
-              data-toggle="popover"
-              data-placement="top"
-              data-content="Copied HTML to Clipboard"
-              >
-            <div class="input-group-append">
-              <button id="htmlLinkCopyButton"
-                class="btn btn-success"
-                type="button">
-                Copy
-              </button>
-            </div>
-          </div>
-
-          <h3 class="lead">Markdown</h3>
-          <div class="input-group mb-3 has-success">
-            <input id="markdownLinkInput"
-              type="text"
-              class="form-control is-valid"
-              data-container="body"
-              data-toggle="popover"
-              data-placement="top"
-              data-content="Copied Markdown to Clipboard"
-              >
-            <div class="input-group-append">
-              <button id="markdownLinkCopyButton" class="btn btn-success" type="button">
                 Copy
               </button>
             </div>

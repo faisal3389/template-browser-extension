@@ -6,9 +6,6 @@ $('#alert').hide()
 // to close the alert
 $("#alert").click(() => { $('#alert').hide() });
 
-// updating the formatted links when user amends link text or url
-$( "#textInput, #urlInput" ).on("keyup change", () => { updateLinkFormats() });
-
 // Copy button events, obtains the input id from amending the button id
 $("button").click((event) => {
   let inputId = "#" + event.target.id.replace("CopyButton", "Input")
@@ -39,18 +36,10 @@ const alertError = (error, message) => {
   $('#alert').show()
 }
 
-const updateLinkFormats = () => {
-  let linkText = $('#textInput').val();
-  let linkUrl = $('#urlInput').val();
-  $('#htmlLinkInput').val("<a href=\"" + linkUrl + "\">" + linkText + "</a>")
-  $('#markdownLinkInput').val("[" + linkText + "](" + linkUrl + ")")
-}
-
 const addLinkDataFromTab = (tabs) => {
   currentTab = tabs[0]
-  $('#textInput').val(currentTab.title);
+  $('#tabTitle').text(currentTab.title);
   $('#urlInput').val(currentTab.url);
-  updateLinkFormats()
 }
 
 // To enable cross-browser use you need to see if this is Chrome or not
