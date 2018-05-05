@@ -52,6 +52,11 @@ extension
 - `manifest.json` update this with the configuration for your extension. If you want to add icons then you need to add them in an icons folder and then specify them here.
 - Add any other theme you want for Bootstrap easily by adding it to the `css/themes` folder and then link to that in `popup.html`
 
+## Publishing your extension
+
+- [Publish in the Chrome Web Store - Google Chrome](https://developer.chrome.com/webstore/publish)
+- [Developer Hub :: Add-ons for Firefox](https://addons.mozilla.org/en-US/developers/)
+
 ## Libraries used
 
 - [lgarron/clipboard-polyfill: Sane copying on the web.](https://github.com/lgarron/clipboard-polyfill)
