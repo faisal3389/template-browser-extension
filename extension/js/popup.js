@@ -2,13 +2,12 @@
 
 // hide the alert that will be triggered if there is a failure to copy text
 $('#alert').hide()
+
 // to close the alert
-$("#hideAlert").click( () => { $('#alert').hide() } );
+$("#alert").click(() => { $('#alert').hide() });
 
 // updating the formatted links when user amends link text or url
-$( "#textInput, #urlInput" ).on("keyup change", () => {
-  updateLinkFormats()
-});
+$( "#textInput, #urlInput" ).on("keyup change", () => { updateLinkFormats() });
 
 // Copy button events, obtains the input id from amending the button id
 $("button").click((event) => {
@@ -16,51 +15,55 @@ $("button").click((event) => {
   copyInputToClipboard(inputId)
 });
 
-function copyInputToClipboard(elementId) {
+const copyInputToClipboard = (elementId) => {
   let data = $(elementId).val()
   let dt = new clipboard.DT();
   dt.setData("text/plain", data);
   clipboard.write(dt)
   .then(() => {
     // confirm successful copy
-    $('[data-toggle="popover"]').popover('disable')
-    $('[data-toggle="popover"]').popover('hide')
-    $(elementId).popover('enable')
-    $(elementId).popover('show')
+    $('[data-toggle="popover"]').popover('disable').popover('hide')
+    $(elementId).popover('enable').popover('show')
+    setTimeout(() => { $(elementId).popover('disable').popover('hide') }, 2000)
     $(elementId).select()
-    setTimeout(() => {
-      $(elementId).popover('disable')
-      $(elementId).popover('hide') 
-    }, 2000)
   })
   .catch((error) => {
-    console.log(error)
-    $('#alertText').text("Error occurred when trying to copy to clipboard")
-    $('#alert').show()
+    alertError(error, "Error occurred when trying to copy to clipboard")
   })
 }
 
-function updateLinkFormats() {
+const alertError = (error, message) => {
+  console.log(message)
+  console.log(error)
+  $('#alertText').text(message)
+  $('#alert').show()
+}
+
+const updateLinkFormats = () => {
   let linkText = $('#textInput').val();
   let linkUrl = $('#urlInput').val();
   $('#htmlLinkInput').val("<a href=\"" + linkUrl + "\">" + linkText + "</a>")
   $('#markdownLinkInput').val("[" + linkText + "](" + linkUrl + ")")
 }
 
-function addLinksFromTab(tabs) {
+const addLinkDataFromTab = (tabs) => {
   tab = tabs[0]
-  let linkText = tab.title;
-  let linkUrl = tab.url;
-  $('#textInput').val(linkText);
-  $('#urlInput').val(linkUrl);
+  $('#textInput').val(tab.title);
+  $('#urlInput').val(tab.url);
   updateLinkFormats()
 }
 
 // To enable cross browser use you need to see if this is Chrome or not
 if(chrome !== undefined) {
-  chrome.tabs.query({active: true, currentWindow: true}, (arrayOfTabs) => {
-    addLinksFromTab(arrayOfTabs);
-  });
+  try {
+    chrome.tabs.query(
+      {active: true, currentWindow: true},
+      (arrayOfTabs) => { addLinkDataFromTab(arrayOfTabs) }
+    );
+  }
+  catch(error) {
+    alertError(error, "Error occurred when trying to get current tab info")
+  }
   // This enables links to be opened in new tabs
   window.addEventListener('click',function(e){
     if(e.target.href !== undefined){
@@ -69,7 +72,10 @@ if(chrome !== undefined) {
   })
 } else {
   browser.tabs.query({active: true, currentWindow: true})
-    .then(addLinksFromTab);
+    .then(addLinkDataFromTab)
+    .catch((error) => {
+      alertError(error, "Error occurred when trying to get current tab info")
+    })
   // This enables links to be opened in new tabs
   window.addEventListener('click',function(e){
     if(e.target.href !== undefined){
