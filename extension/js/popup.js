@@ -3,6 +3,14 @@
 // hide the alert until a copy button pressed
 $('#alert').hide()
 
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+
 // These are for updating the formatted links when user amends link text or url
 $( "#textInput" ).keyup(function() {
   updateLinkFormats()
@@ -48,15 +56,16 @@ function copyInputToClipboard(elementId, contentName) {
   dt.setData("text/plain", data);
   clipboard.write(dt)
   .then(() => {
-    $('#alertText').text("Copied " + contentName + " to Clipboard")
-    $('#alert').show()
+    $(elementId).popover('show')
+    $(elementId).select()
+    setTimeout(() => { $(elementId).popover('hide') }, 2000)
   })
   .catch((error) => {
     console.log(error)
     $('#alertText').text("Error with copying " + contentName + " to Clipboard")
     $('#alert').show()
   })
-  $(elementId).select().focus()
+  // $(elementId).select()
 }
 
 function updateLinkFormats() {

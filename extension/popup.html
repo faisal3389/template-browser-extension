@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery.js"></script>
     <script src="js/clipboard-polyfill.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <!-- <script src="js/bootstrap.js"></script> -->
   </head>
 
   <body>
@@ -31,33 +33,81 @@
 
           <h3 class="lead">Text</h3>
           <div class="input-group mb-3 has-success">
-            <input id="textInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
+            <input id="textInput"
+            type="text"
+            class="form-control is-valid"
+            aria-describedby="basic-addon2"
+            aria-label="Markdown link"
+            data-container="body"
+            data-toggle="popover"
+            data-placement="top"
+            data-content="Copied Text to Clipboard"
+            >
             <div class="input-group-append">
-              <button id="textCopyButton" class="btn btn-success" type="button">Copy</button>
+              <button id="textCopyButton"
+                class="btn btn-success"
+                type="button">
+                Copy
+              </button>
             </div>
           </div>
 
           <h3 class="lead">Url</h3>
           <div class="input-group mb-3 has-success">
-            <input id="urlInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
+            <input id="urlInput" type="text"
+            class="form-control is-valid"
+            aria-describedby="basic-addon2"
+            aria-label="Markdown link"
+            data-container="body"
+            data-toggle="popover"
+            data-placement="top"
+            data-content="Copied Url to Clipboard"
+            >
             <div class="input-group-append">
-              <button id="urlCopyButton" class="btn btn-success" type="button">Copy</button>
+              <button id="urlCopyButton"
+                class="btn btn-success"
+                type="button">
+                Copy
+              </button>
             </div>
           </div>
 
           <h3 class="lead">HTML</h3>
           <div class="input-group mb-3 has-success">
-            <input id="htmlLinkInput" type="text" class="form-control is-valid" aria-describedby="basic-addon2">
+            <input id="htmlLinkInput"
+              type="text"
+              class="form-control is-valid"
+              aria-describedby="basic-addon2"
+              aria-label="Markdown link"
+              data-container="body"
+              data-toggle="popover"
+              data-placement="top"
+              data-content="Copied HTML to Clipboard"
+              >
             <div class="input-group-append">
-              <button id="htmlLinkCopyButton" class="btn btn-success" type="button">Copy</button>
+              <button id="htmlLinkCopyButton"
+                class="btn btn-success"
+                type="button">
+                Copy
+              </button>
             </div>
           </div>
 
           <h3 class="lead">Markdown</h3>
           <div class="input-group mb-3 has-success">
-            <input id="markdownLinkInput" type="text" class="form-control is-valid" aria-label="Markdown link">
+            <input id="markdownLinkInput"
+              type="text"
+              class="form-control is-valid"
+              aria-label="Markdown link"
+              data-container="body"
+              data-toggle="popover"
+              data-placement="top"
+              data-content="Copied Markdown to Clipboard"
+              >
             <div class="input-group-append">
-              <button id="markdownLinkCopyButton" class="btn btn-success">Copy</button>
+              <button id="markdownLinkCopyButton" class="btn btn-success" type="button">
+                Copy
+              </button>
             </div>
           </div>
 
