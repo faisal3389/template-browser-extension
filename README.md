@@ -1,6 +1,6 @@
 # Template Browser Extension
 
-A template browser extension. This designed to be a quick way to setup a browser extension.
+A template browser extension. This designed to be a quick way to setup a browser extension, which can be used by loading locally or publishing the the Chrome Web Store or Firefox Add-ons store.
 
 <table><tr><td>
   <img src="images/screenshot.png" width="400px" style="border: 1px solid black;">
@@ -22,6 +22,35 @@ A template browser extension. This designed to be a quick way to setup a browser
 - Visit `about:debugging`
 - Click on `Load Temporary Add-on`
 - Select the folder you saved this in
+
+## Files to edit to create your extension
+
+The extension project structure looks like this:
+
+```
+extension
+├── css
+│   ├── style.css
+│   └── themes
+│       ├── bootstrap
+│       │   └── bootstrap.css
+│       └── flatly
+│           └── bootstrap.css
+├── js
+│   ├── lib
+│   │   ├── bootstrap.bundle.js
+│   │   ├── clipboard-polyfill.js
+│   │   └── jquery.js
+│   └── popup.js
+├── manifest.json
+└── popup.html
+```
+
+- `popup.html` is the popup that appears when you click the extension icon in the browser's toolbar
+- `jspopup.js` is the JavaScript file that will run when the extension icon is clicked. This already has some functions to copy to the clipboard, to interact with the browser's tabs (depending on whether the browser is Chrome or not), and add event listeners.
+- `css/style.css` is the css file for your popup page
+- `manifest.json` update this with the configuration for your extension. If you want to add icons then you need to add them in an icons folder and then specify them here.
+- Add any other theme you want for Bootstrap easily by adding it to the `css/themes` folder and then link to that in `popup.html`
 
 ## Libraries used
 
