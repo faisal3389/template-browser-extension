@@ -2,7 +2,7 @@
 
 A template browser extension. This designed to be a quick way to setup a browser extension.
 
-<img src="images/screenshot.png" width="300px">
+<img src="images/screenshot.png" width="300px" border="1">
 
 ### Save locally on your computer and run extension
 
