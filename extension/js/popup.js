@@ -1,71 +1,43 @@
 // Link Formatter js
 
-// hide the alert until a copy button pressed
+// hide the alert that will be triggered if there is a failure to copy text
 $('#alert').hide()
-
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-
-$('.popover-dismiss').popover({
-  trigger: 'focus'
-})
-
-// These are for updating the formatted links when user amends link text or url
-$( "#textInput" ).keyup(function() {
-  updateLinkFormats()
-});
-
-$( "#urlInput" ).keyup(function() {
-  updateLinkFormats()
-});
-
-$("#textInput").change(()=> {
-  updateLinkFormats()
-});
-
-$("#urlInput").change(()=> {
-  updateLinkFormats()
-});
-
 // to close the alert
-$("#hideAlert").click(()=> {
-  $('#alert').hide()
+$("#hideAlert").click( () => { $('#alert').hide() } );
+
+// updating the formatted links when user amends link text or url
+$( "#textInput, #urlInput" ).on("keyup change", () => {
+  updateLinkFormats()
 });
 
-// Copy button events
-$("#textCopyButton").click(()=> {
-  copyInputToClipboard("#textInput", "Title")
+// Copy button events, obtains the input id from amending the button id
+$("button").click((event) => {
+  let inputId = "#" + event.target.id.replace("CopyButton", "Input")
+  copyInputToClipboard(inputId)
 });
 
-$("#urlCopyButton").click(()=> {
-  copyInputToClipboard("#urlInput", "Url")
-});
-
-$("#htmlLinkCopyButton").click(()=> {
-  copyInputToClipboard("#htmlLinkInput", "HTML")
-});
-
-$("#markdownLinkCopyButton").click(()=> {
-  copyInputToClipboard("#markdownLinkInput", "Markdown")
-});
-
-function copyInputToClipboard(elementId, contentName) {
+function copyInputToClipboard(elementId) {
   let data = $(elementId).val()
   let dt = new clipboard.DT();
   dt.setData("text/plain", data);
   clipboard.write(dt)
   .then(() => {
+    // confirm successful copy
+    $('[data-toggle="popover"]').popover('disable')
+    $('[data-toggle="popover"]').popover('hide')
+    $(elementId).popover('enable')
     $(elementId).popover('show')
     $(elementId).select()
-    setTimeout(() => { $(elementId).popover('hide') }, 2000)
+    setTimeout(() => {
+      $(elementId).popover('disable')
+      $(elementId).popover('hide') 
+    }, 2000)
   })
   .catch((error) => {
     console.log(error)
-    $('#alertText').text("Error with copying " + contentName + " to Clipboard")
+    $('#alertText').text("Error occurred when trying to copy to clipboard")
     $('#alert').show()
   })
-  // $(elementId).select()
 }
 
 function updateLinkFormats() {
@@ -86,7 +58,7 @@ function addLinksFromTab(tabs) {
 
 // To enable cross browser use you need to see if this is Chrome or not
 if(chrome !== undefined) {
-  chrome.tabs.query({active: true, currentWindow: true}, function(arrayOfTabs) {
+  chrome.tabs.query({active: true, currentWindow: true}, (arrayOfTabs) => {
     addLinksFromTab(arrayOfTabs);
   });
   // This enables links to be opened in new tabs
