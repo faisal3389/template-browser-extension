@@ -68,6 +68,8 @@ extension
 
 The following pages were helpful when creating a web extension.
 
+- [What are extensions? - Google Chrome](https://developer.chrome.com/extensions)
+- [Anatomy of an extension - Mozilla | MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Using media queries - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [manifest.json - Mozilla | MDN](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json)
 - [Manifest File Format - Google Chrome](https://developer.chrome.com/apps/manifest)
